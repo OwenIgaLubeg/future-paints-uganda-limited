@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Future Paints Uganda Limited | About Us </title>
+
+    <style>
+        *{
+          margin:0;
+          padding:0;
+          box-sizing:border-box;
+          font-family: Arial, sans-serif;
+        }
+
+        body{
+          line-height:1.6;
+          color:#333;
+          background:#fff;
+        }
+
+        a{
+          text-decoration:none;
+        }
+
+        /* NAVBAR */
+        .navbar{
+          width:100%;
+          background:#fff;
+          box-shadow:0 2px 8px rgba(0,0,0,.1.5);
+          position:sticky;
+          top:0;
+          z-index:1000;
+        }
+
+        .container{
+          width:90%;
+          max-width:1200px;
+          margin:auto;
+        }
+
+        .nav-flex{
+          display:flex;
+          justify-content:space-between;
+          align-items:center;
+          padding:15px 0;
+        }
+
+        .navbar-brand img{
+          height:60px;
+        }
+
+        .nav-links{
+          display:flex;
+          gap:20px;
+          align-items:center;
+        }
+
+        .nav-links a{
+          color:#222;
+          font-weight:600;
+        }
+
+        .nav-links a:hover{
+          color:#d4a017;
+        }
+
+        .nav-btn{
+          background:#d4a017;
+          color:#fff !important;
+          padding:10px 18px;
+          border-radius:5px;
+        }
+
+        .menu-toggle{
+          display:none;
+          font-size:30px;
+          cursor:pointer;
+        }
+
+        /* HERO */
+        .about-hero{
+          height:70vh;
+          background:linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0)),
+          url('assets/images/ff3.jpg') center/cover no-repeat;
+          display:flex;
+          align-items:center;
+          justify-content:center;
+          text-align:center;
+          color:#fff;
+        }
+
+        .about-hero h1{
+          font-size:3rem;
+          margin-bottom:15px;
+        }
+
+        .about-hero p{
+          max-width:700px;
+          margin:auto;
+          font-size:1.1rem;
+        }
+
+        /* SECTION */
+        .section{
+          padding:80px 0;
+        }
+
+        .section-title{
+          text-align:center;
+          font-size:2.2rem;
+          margin-bottom:20px;
+          color:#111;
+        }
+
+        .section-subtitle{
+          text-align:center;
+          color:#666;
+          max-width:800px;
+          margin:0 auto 50px;
+        }
+
+        /* STORY */
+        .story-grid{
+          display:grid;
+          grid-template-columns:1fr 1fr;
+          gap:50px;
+          align-items:center;
+        }
+
+        .story-grid img{
+          width:100%;
+          border-radius:10px;
+        }
+
+        .story-text h2{
+          margin-bottom:20px;
+          color:#d4a017;
+        }
+
+        /* MISSION */
+        .mv-grid{
+          display:grid;
+          grid-template-columns:repeat(3,1fr);
+          gap:25px;
+        }
+
+        .mv-card{
+          background:#f9f9f9;
+          padding:30px;
+          border-radius:8px;
+          text-align:center;
+          box-shadow:0 4px 10px rgba(0,0,0,0.5);
+        }
+
+        .mv-card h3{
+          margin-bottom:10px;
+          color:#d4a017;
+        }
+
+        /* WHY US */
+        .why-grid{
+          display:grid;
+          grid-template-columns:repeat(2,1fr);
+          gap:30px;
+        }
+
+        .why-card{
+          display:flex;
+          gap:15px;
+        }
+
+        .why-card img{
+          width:60px;
+          height:60px;
+        }
+
+        /* TEAM */
+        .team-grid{
+          display:grid;
+          grid-template-columns:repeat(3,1fr);
+          gap:25px;
+        }
+
+        .team-card{
+          background:#fff;
+          border-radius:10px;
+          overflow:hidden;
+          box-shadow:0 4px 10px rgba(0,0,0,.15);
+          text-align:center;
+        }
+
+        .team-card img{
+          width:100%;
+          height:280px;
+          object-fit:cover;
+        }
+
+        .team-card h4{
+          margin:15px 0 5px;
+        }
+
+        .team-card p{
+          color:#666;
+          padding-bottom:20px;
+        }
+
+        /* FOOTER */
+        .footer{
+          background:#111;
+          color:#fff;
+          padding:60px 20px 20px;
+        }
+
+        .footer-container{
+          display:grid;
+          grid-template-columns:repeat(3,1fr);
+          gap:30px;
+        }
+
+        .footer-logo{
+          color:#d4a017;
+        }
+
+        .footer-links ul{
+          list-style:none;
+        }
+
+        .footer-links a{
+          color:#fff;
+        }
+
+        .footer-bottom{
+          text-align:center;
+          margin-top:30px;
+          border-top:1px solid rgba(255,255,255,.1);
+          padding-top:20px;
+        }
+
+        /* RESPONSIVE */
+        @media(max-width:992px){
+          .story-grid,
+          .mv-grid,
+          .team-grid,
+          .footer-container,
+          .why-grid{
+            grid-template-columns:1fr;
+          }
+
+          .nav-links{
+            display:none;
+            flex-direction:column;
+            position:absolute;
+            top:90px;
+            left:0;
+            width:100%;
+            background:#fff;
+            padding:20px;
+          }
+
+          .nav-links.active{
+            display:flex;
+          }
+
+          .menu-toggle{
+            display:block;
+          }
+
+          .about-hero h1{
+            font-size:2rem;
+          }
+        }
+    </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+    <div class="container nav-flex">
+        <div class="navbar-brand">
+            <a href="index.html"><img src="assets/images/ff-logo.jpg" alt="Future Paints"></a>
+        </div>
+
+        <nav class="nav-links" id="navLinks">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact</a>
+            <a href="https://wa.me/+256761994330" class="nav-btn">Whatsapp</a>
+        </nav>
+
+        <div class="menu-toggle" id="menuToggle">&#9776;</div>
+    </div>
+</header>
+
+<!-- HERO -->
+<section class="about-hero">
+    <div class="container">
+        <img src="assets/images/ff3.jpg" alt="">
+        <h1>About Future Paints Uganda Limited</h1>
+        <p>Transforming spaces through premium painting, innovative design, and unmatched craftsmanship.</p>
+    </div>
+</section>
+
+<!-- STORY -->
+<section class="section">
+    <div class="container story-grid">
+        <img src="assets/images/ff2.jpg" alt="">
+        <div class="story-text">
+            <h2>About Future Paints</h2>
+            <p> Future Paints Uganda Limited is a Painting and Interior design Company in the heart of Kampala, Uganda. At Future Paints Uganda Limited, we are passionate about transforming spaces into beautiful, functional, and personalized environments that reflect the unique style and needs of our clients. Our team of experienced interior designers and painters are dedicated to delivering exceptional service, attention to detail, and quality craftsmanship.
+                With years of experience in the industry, we have honed our skills in designing and executing interior design projects that exceed our clients' expectations. From concept to completion, we work closely with our clients to understand their vision, lifestyle, and budget, ensuring that every aspect of the project is tailored to their needs.
+                Our services include interior design, painting, color consultation, epoxy floor installation, TV console installation, POP installation, project management, and lots more. Whether you're looking to revamp a single room or transform an entire property, we have the expertise and creativity to bring your vision to life.
+                At Future Paints, we believe that a well-designed space can enhance your quality of life, boost productivity, and create a sense of pride and belonging. We're committed to providing exceptional customer service, timely completion, and competitive pricing, ensuring that you're completely satisfied with every aspect of your project.</p>
+            <p>Our priority is premium materials, purposeful layouts, and a smooth client experience — so every project feels bespoke.</p>
+        </div>
+    </div>
+</section>
+
+<!-- MISSION -->
+<section class="section" style="background:#fafafa;">
+    <div class="container">
+        <h2 class="section-title">Our Foundation</h2>
+        <div class="mv-grid">
+            <div class="mv-card">
+                <h3>Our Mission</h3>
+                <p>To deliver exceptional painting and interior design services with quality and innovation.</p>
+            </div>
+            <div class="mv-card">
+                <h3>Our Vision</h3>
+                <p>To become Uganda’s most trusted and recognized paint and design company.</p>
+            </div>
+            <div class="mv-card">
+                <h3>Our Values</h3>
+                <p>Integrity, creativity, excellence, professionalism, and customer satisfaction.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- WHY CHOOSE US -->
+<section class="section">
+    <div class="container">
+        <h2 class="section-title">Why Choose Us</h2>
+        <div class="why-grid">
+            <div class="why-card">
+                <img src="assets/images/quality-paints.jpg">
+                <div>
+                    <h4>Premium Quality</h4>
+                    <p>We use high-grade paints and finishing materials for lasting beauty.</p>
+                </div>
+            </div>
+            <div class="why-card">
+                <img src="assets/images/painters1.jpg">
+                <div>
+                    <h4>Experienced Team</h4>
+                    <p>Skilled painters and designers with years of practical expertise.</p>
+                </div>
+            </div>
+            <div class="why-card">
+                <img src="assets/images/ff11.jfif">
+                <div>
+                    <h4>Creative Designs</h4>
+                    <p>Innovative concepts tailored to your personal or business style.</p>
+                </div>
+            </div>
+            <div class="why-card">
+                <img src="assets/images/Hire-Painters-scaled.jpg">
+                <div>
+                    <h4>Reliable Support</h4>
+                    <p>Professional consultation and timely project delivery.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- TEAM -->
+<!--<section class="section" style="background:#fafafa;">
+    <div class="container">
+        <h2 class="section-title">Meet Our Experts</h2>
+        <div class="team-grid">
+            <div class="team-card">
+                <img src="assets/images/team1.jpg" alt="">
+                <h4>Interior Designers</h4>
+                <p>Creative minds shaping luxurious interiors.</p>
+            </div>
+            <div class="team-card">
+                <img src="assets/images/team2.jpg" alt="">
+                <h4>Professional Painters</h4>
+                <p>Experts in flawless paint finishes.</p>
+            </div>
+            <div class="team-card">
+                <img src="assets/images/team3.jpg" alt="">
+                <h4>Project Managers</h4>
+                <p>Ensuring projects are delivered on time.</p>
+            </div>
+        </div>
+    </div>
+</section>-->
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="footer-container container">
+        <div class="footer-brand">
+            <h2 class="footer-logo">Future Paints</h2>
+            <p>Crafting timeless interiors with elegance, precision, and artistic detail.</p>
+        </div>
+
+        <div class="footer-links">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact us</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-contact">
+            <h4>Contact</h4>
+            <p>Busabala rd Kampala, Uganda</p>
+            <p>+256761994330 or +256774939834</p>
+            <p>futurepaintsugandalimited@gmail.com</p>
+            <a href="https://wa.me/+256761994330" target="_blank" class="footer-btn">Get a Free Quote</a>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>© Future Paints Uganda Limited — All Rights Reserved.</p>
+    </div>
+</footer>
+
+<script>
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinks = document.getElementById("navLinks");
+
+    menuToggle.onclick = ()=>{
+     navLinks.classList.toggle("active");
+    }
+</script>
+
+</body>
+</html>
